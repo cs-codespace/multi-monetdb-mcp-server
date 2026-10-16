@@ -1,0 +1,40 @@
+{
+  "connections": [
+    {
+      "label": "production",
+      "host": "db.example.com",
+      "port": 50000,
+      "user": "readonly_user",
+      "password": "your_password",
+      "database": "myapp",
+      "enabled": true,
+      "readOnly": true,
+      "timeout": 10000
+    },
+    {
+      "label": "analytics",
+      "url": "mapi:monetdb://user:pass@analytics.example.com:50000/analytics",
+      "enabled": true,
+      "readOnly": true
+    },
+    {
+      "label": "staging",
+      "host": "staging-db.example.com",
+      "port": 50000,
+      "user": "dev",
+      "password": "dev_password",
+      "database": "myapp_staging",
+      "enabled": true,
+      "readOnly": false
+    },
+    {
+      "label": "local",
+      "host": "localhost",
+      "port": 50000,
+      "user": "monetdb",
+      "password": "monetdb",
+      "database": "demo",
+      "enabled": false
+    }
+  ]
+}

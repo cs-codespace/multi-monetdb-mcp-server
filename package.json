@@ -1,0 +1,49 @@
+{
+  "name": "mcp-monetdb-multi",
+  "version": "1.0.0",
+  "description": "Multi-database MonetDB MCP server. One server, many databases. Supports per-project isolation via --label filter.",
+  "type": "module",
+  "bin": {
+    "mcp-monetdb": "dist/index.js"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "USAGE.md",
+    "config.example.json"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "monetdb",
+    "model-context-protocol",
+    "claude",
+    "cursor",
+    "ai",
+    "database",
+    "multi-database",
+    "analytics",
+    "column-store"
+  ],
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "monetdb": "^2.2.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.0"
+  }
+}
